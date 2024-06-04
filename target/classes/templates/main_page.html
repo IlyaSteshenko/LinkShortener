@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link th:href="@{/css/main_page_style.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+    <div class="link-form">
+        <div class="form-container">
+            <div class="inner-container">
+                <div class="title-1 form-inner-container">
+                    <p>Shorten a long link</p>
+                </div>
+
+                <div class="title-2 form-inner-container">
+                    <p>Paste a long URL</p>
+                </div>
+
+                <form th:method="post" th:object="${link}" th:action="@{/new}" class="form">
+                    <input th:field="*{defaultLink}" type="text" class="link-input form-inner-container" placeholder="Example: http://super-long-link/shorten">
+                    <input type="submit" value="Get Short Link" class="get-short-link-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
