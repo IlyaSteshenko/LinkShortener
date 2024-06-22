@@ -20,7 +20,7 @@
                 </div>
 
                 <form th:method="post" th:object="${link}" th:action="@{/new}" class="form">
-                    <input th:field="*{defaultLink}" type="text" class="link-input form-inner-container" placeholder="Example: http://super-long-link/shorten">
+                    <input th:field="*{defaultLink}" type="text" class="link-input form-inner-container" placeholder="Example: http://super-long-link/shorten" required>
                     <input type="submit" value="Get Short Link" class="get-short-link-btn">
                 </form>
             </div>
