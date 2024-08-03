@@ -25,7 +25,6 @@ public class MainController {
             @ModelAttribute(name = "link") Link defaultLink,
             Model model
     ) {
-
         LinkService linkService = new LinkService();
         String shortLink = ShortLinkService.createShortLink(defaultLink);
 
@@ -38,5 +37,4 @@ public class MainController {
         model.addAttribute("shortLink", shortLink);
         return "success";
     }
-
 }
