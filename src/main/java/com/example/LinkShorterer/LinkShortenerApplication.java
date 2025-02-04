@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-public class LinkShortererApplication {
+public class LinkShortenerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LinkShortererApplication.class, args);
+		SpringApplication.run(LinkShortenerApplication.class, args);
 	}
 
 }

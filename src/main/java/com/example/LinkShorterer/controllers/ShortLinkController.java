@@ -16,8 +16,6 @@ public class ShortLinkController {
         LinkService linkService = new LinkService();
         Link link = linkService.findDefaultLinkByShortLink(request.getRequestURL().substring(7));
 
-        RedirectView redirectView = new RedirectView();
-        redirectView.setUrl(link.getDefaultLink());
-        return redirectView;
+        return new RedirectView(link.getDefaultLink());
     }
 }

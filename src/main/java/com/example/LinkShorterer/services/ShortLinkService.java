@@ -3,6 +3,7 @@ package com.example.LinkShorterer.services;
 import com.example.LinkShorterer.beans.SessionFactoryManager;
 import com.example.LinkShorterer.models.Link;
 import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.Random;
 
@@ -27,7 +28,7 @@ public class ShortLinkService {
 
         char[] alphabet = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890".toCharArray();
 
-        StringBuilder url = new StringBuilder("localhost:8080/");
+        StringBuilder url = new StringBuilder("localhost:8082/");
         Random random = new Random();
 
         for (int i = 0; i <= 7; i++) {
